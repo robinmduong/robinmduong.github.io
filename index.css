@@ -1,0 +1,184 @@
+body {
+    width: 100%
+    background-color: white;
+    font-family: 'Lato', sans-serif;
+}
+
+/* NavBar */
+
+.top-navbar {
+    list-style-type: none; /*removes the bullets*/
+    font-size: 1.2em;
+    overflow: hidden;
+    width: 100%;
+    position: fixed;
+    background-color: black;
+    color: white;
+    z-index:9999; /* Keeps nav bar on top */
+    transition: 1s ease;
+}
+
+
+.top-navbar-ul {
+    float: right;
+    display: flex;
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* NavBar Buttons */
+
+.top-navbar-li {
+    display: inline-block; /* make entire area clickable, not just text*/
+    text-align: center;
+    padding: 1em;
+    text-decoration: none;
+}
+
+.top-navbar-li:hover {
+    background-color: white;
+    color: black;
+    transition: 0.2s ease;
+
+}
+
+.top-navbar-li .fas {
+    padding: 0 0.4em; /* Add no padding and some padding to right of the icons within the navbar buttons */
+}
+
+.home-nav:hover {
+    color: green;
+}
+.about-nav:hover {
+    color: red;
+}
+
+.contact-nav:hover {
+    color: blue;
+}
+
+/* Introduction */
+
+.robin-container {
+  position: relative;
+  width: 100%;
+  display: inline;
+}
+
+.introduction-row {
+    width: 100%
+}
+
+.icon {
+    /*display: block;*/
+    display: inline;
+    width: 100%;
+    height: auto;
+}
+
+/*Color effects on introduction icons*/
+.dove:hover {
+    color:red;
+}
+
+.fullstack:hover {
+    color: blue;
+}
+
+.chimera:hover {
+    color: green;
+}
+
+/*Overlay*/
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    width: 0%; /* Makes the text invisible at first */
+    height: 1em; /* Before I had it at 100%, but 1em makes it same height as the text */
+    transition: .3s ease;
+}
+
+.full-introduction {
+    font-size: 3em;
+    padding: 2em 1em 1em 1em;
+    text-align: left;
+    margin: 0 auto;
+}
+
+.introduction-row {
+    padding: 0;
+    width: 100%;
+}
+
+.robin-container:hover .overlay {
+    /*width: 100%;*/
+    width: 13em;
+    left: 0;
+    transition: 0;
+}
+
+.text-intro {
+    color: black;
+    /*position: absolute; */
+    position: relative;
+    top: 40%;
+    left: 60%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+}
+
+/* Screen Size for Mobile */
+
+
+@media only screen and (min-width: 100px) and (max-width: 750px) {
+    body {
+        font-size: 0.8em;
+    }
+
+    .overlay {
+        bottom: 0;
+        left: 0;
+        right: 0;
+        overflow: hidden;
+        width: 13em; /* Makes the text invisible at first */
+        height: 1em; /* Before I had it at 100%, but 1em makes it same height as the text */
+    }
+
+    .dove {
+        color:red;
+        display: inline-block;
+    }
+
+    .fullstack {
+        color: blue;
+        display: inline-block;
+    }
+
+    .chimera {
+        color: green;
+        display: inline-block;
+    }
+
+}
+
+
+/* Portfolio Section */
+.portfolio-container {
+    background-color: pink;
+}
+
+.portfolio-card {
+    width: 33%;
+    float: left;
+}
+
+.portfolio-header {
+    width: 100%;
+}
